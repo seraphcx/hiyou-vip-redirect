@@ -1,9 +1,9 @@
-# hiyou.vip redirect
+# hiyou.vip landing page
 
-Temporary GitHub Pages redirect layer for `hiyou.vip`.
+GitHub Pages landing page for `hiyou.vip`.
 
-Target:
-https://acnqatun5fa0.aiforce.cloud/app/app_178tjmf9b25/
+The site is self-hosted in this repository so WeChat and other clients can open
+the page without following an immediate redirect to a third-party app domain.
 
-Reason:
-Tencent Cloud DNSPod URL forwarding requires ICP filing for the source domain, so this keeps the domain usable before filing is complete.
+Root-level verification files may be added here when platforms require domain
+ownership checks.

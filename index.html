@@ -3,38 +3,1278 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; img-src 'self'; form-action 'none'; base-uri 'none'; frame-ancestors 'none'; upgrade-insecure-requests">
-  <meta http-equiv="refresh" content="0; url=https://acnqatun5fa0.aiforce.cloud/app/app_178tjmf9b25/">
-  <link rel="canonical" href="https://acnqatun5fa0.aiforce.cloud/app/app_178tjmf9b25/">
-  <title>HiYou</title>
-  <script>
-    window.location.replace('https://acnqatun5fa0.aiforce.cloud/app/app_178tjmf9b25/');
-  </script>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <title>赵星｜自我介绍</title>
   <style>
     :root {
-      color-scheme: light;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f7f3e8;
-      color: #082a52;
+      --navy: #06214B;
+      --orange: #E95A2A;
+      --green: #596A50;
+      --olive: #879077;
+      --gold: #D99A38;
+      --paper: #F8EFDA;
+      --paper-2: #F1E2C4;
+      --ink: #273044;
+      --muted: #6D705F;
+      --line: rgba(6, 33, 75, 0.14);
+      --white: rgba(255, 255, 255, 0.72);
+      --shadow: 0 18px 48px rgba(6, 33, 75, 0.11);
+      --radius: 8px;
+      --max: 1160px;
     }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      min-height: 100vh;
       margin: 0;
-      display: grid;
-      place-items: center;
-      text-align: center;
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.72;
+      background:
+        radial-gradient(circle at 12% 4%, rgba(217, 154, 56, 0.18), transparent 26rem),
+        radial-gradient(circle at 92% 12%, rgba(89, 106, 80, 0.18), transparent 30rem),
+        linear-gradient(180deg, #fbf2df 0%, var(--paper) 58%, #f3e5ca 100%);
+      background-attachment: fixed;
     }
-    a {
-      color: #c64e2f;
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.35;
+      background-image:
+        linear-gradient(rgba(6, 33, 75, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6, 33, 75, 0.025) 1px, transparent 1px);
+      background-size: 30px 30px;
+      z-index: -2;
+    }
+
+    a, button { color: inherit; font: inherit; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(6, 33, 75, 0.11);
+      background: rgba(248, 239, 218, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .topbar-inner {
+      width: min(100% - 32px, var(--max));
+      min-height: 62px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 27px;
+      height: 27px;
+      border-radius: 8px;
+      background: var(--orange);
+      position: relative;
+      box-shadow: 0 8px 18px rgba(233, 90, 42, 0.24);
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: var(--paper);
+    }
+
+    .brand-mark::before {
+      width: 12px;
+      height: 12px;
+      left: 5px;
+      top: 5px;
+    }
+
+    .brand-mark::after {
+      width: 7px;
+      height: 7px;
+      right: 5px;
+      bottom: 5px;
+      opacity: 0.72;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: rgba(6, 33, 75, 0.78);
+      font-size: 0.92rem;
+      padding: 7px 10px;
+      border-radius: 8px;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      color: var(--navy);
+      background: rgba(255, 255, 255, 0.62);
+      outline: 2px solid transparent;
+    }
+
+    .hero {
+      min-height: calc(100vh - 62px);
+      display: grid;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 64px 0 44px;
+      border-bottom: 1px solid rgba(6, 33, 75, 0.08);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(248, 239, 218, 0.98) 0%, rgba(248, 239, 218, 0.88) 48%, rgba(248, 239, 218, 0.38) 100%),
+        url("elements_png/02_constellation_network_transparent.png") right 8% top 12% / min(62vw, 760px) auto no-repeat;
+      z-index: -2;
+    }
+
+    .hero-inner {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.78fr);
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-weight: 900;
+      margin: 0 0 20px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 70px;
+      height: 6px;
+      background: var(--orange);
+      display: inline-block;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      color: var(--navy);
+      font-size: 3rem;
+      line-height: 1.04;
+      margin-bottom: 22px;
+      font-weight: 950;
+    }
+
+    .hero-lede {
+      max-width: 760px;
+      color: #26354f;
+      font-size: 1.18rem;
+      line-height: 1.95;
+      margin-bottom: 28px;
+    }
+
+    .hero-lede strong {
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .primary-link,
+    .secondary-link {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    .primary-link {
+      color: #fffaf1;
+      background: var(--orange);
+      box-shadow: 0 12px 24px rgba(233, 90, 42, 0.24);
+    }
+
+    .secondary-link {
+      color: var(--navy);
+      background: rgba(255, 255, 255, 0.64);
+      border: 1px solid rgba(6, 33, 75, 0.16);
+    }
+
+    .hero-visual {
+      min-height: 620px;
+      position: relative;
+    }
+
+    .portrait-card {
+      position: absolute;
+      right: 0;
+      top: 8%;
+      width: min(90%, 405px);
+      min-height: 500px;
+      border-radius: 8px;
+      border: 1px solid rgba(6, 33, 75, 0.12);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.38)),
+        url("elements_png/04_ai_light_path_transparent.png") center 52% / 92% auto no-repeat;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 24px;
+    }
+
+    .portrait-card .official-photo {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      right: 42px;
+      bottom: 34px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 10px solid rgba(248, 239, 218, 0.76);
+      box-shadow: 0 20px 36px rgba(6, 33, 75, 0.18);
+    }
+
+    .portrait-note {
+      position: relative;
+      z-index: 2;
+      width: 82%;
+      border-left: 6px solid var(--orange);
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 8px;
+      padding: 16px 18px;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .portrait-note small {
+      display: block;
+      color: var(--muted);
       font-weight: 700;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    .signal-row {
+      width: min(100% - 32px, var(--max));
+      margin: -24px auto 0;
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .signal,
+    .card,
+    .timeline-item,
+    .panel,
+    .project-card,
+    .value-card {
+      border-radius: 8px;
+      border: 1px solid rgba(6, 33, 75, 0.13);
+      background: rgba(255, 255, 255, 0.68);
+      box-shadow: 0 12px 34px rgba(6, 33, 75, 0.07);
+    }
+
+    .signal {
+      min-height: 92px;
+      padding: 16px;
+    }
+
+    .signal strong {
+      display: block;
+      color: var(--navy);
+      line-height: 1.42;
+      margin-bottom: 6px;
+    }
+
+    .signal span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    main {
+      padding: 76px 0 86px;
+    }
+
+    section {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto 86px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 0.28fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      color: var(--orange);
+      font-weight: 950;
+      font-size: 0.94rem;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 2.3rem;
+      line-height: 1.22;
+      margin-bottom: 12px;
+      font-weight: 950;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .source-pill {
+      justify-self: end;
+      align-self: center;
+      border: 1px solid rgba(6, 33, 75, 0.16);
+      background: rgba(255, 255, 255, 0.54);
+      color: var(--navy);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.9rem;
+      font-weight: 900;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .story-grid-single {
+      grid-template-columns: 1fr;
+    }
+
+    .panel {
+      min-height: 430px;
+      padding: 28px;
+      background:
+        linear-gradient(120deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.48)),
+        url("elements_png/03_task_bubbles_transparent.png") right 22px top 28px / 48% auto no-repeat;
+      display: grid;
+      align-content: center;
+    }
+
+    .panel h3 {
+      color: var(--navy);
+      font-size: 1.85rem;
+      line-height: 1.27;
+      margin-bottom: 14px;
+      max-width: 680px;
+    }
+
+    .panel p {
+      color: #34415a;
+      max-width: 720px;
+      font-size: 1.03rem;
+    }
+
+    .panel-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 9px;
+      border-radius: 8px;
+      color: var(--navy);
+      background: rgba(248, 239, 218, 0.78);
+      border: 1px solid rgba(6, 33, 75, 0.12);
+      font-size: 0.86rem;
+      font-weight: 850;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      counter-reset: step;
+    }
+
+    .illustrated-section {
+      position: relative;
+    }
+
+    .section-illustration {
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
+      object-fit: contain;
+      opacity: 0.18;
+      filter: drop-shadow(0 18px 22px rgba(6, 33, 75, 0.08));
+    }
+
+    .section-illustration.path-boy {
+      width: 230px;
+      right: 2%;
+      top: 20px;
+    }
+
+    .section-illustration.projects-girl {
+      width: 250px;
+      left: -12px;
+      top: 18px;
+      opacity: 0.16;
+    }
+
+    .illustrated-section > .section-head,
+    .illustrated-section > .timeline,
+    .illustrated-section > .project-grid {
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-item {
+      position: relative;
+      min-height: 250px;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .timeline-item::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fffaf1;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: var(--orange);
+    }
+
+    .timeline-item h3 {
+      color: var(--navy);
+      font-size: 1.16rem;
+      line-height: 1.34;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-bottom: 0;
+    }
+
+    .human-wrap {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .human-buttons {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      align-content: start;
+    }
+
+    .human-hint {
+      grid-column: 1 / -1;
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .human-btn {
+      min-height: 104px;
+      border: 1px solid rgba(6, 33, 75, 0.14);
+      background: rgba(255, 255, 255, 0.58);
+      color: var(--navy);
+      border-radius: 8px;
+      padding: 12px 8px;
+      cursor: pointer;
+      box-shadow: 0 10px 26px rgba(6, 33, 75, 0.06);
+      transition: transform 180ms ease, background 180ms ease;
+      overflow-wrap: anywhere;
+    }
+
+    .human-btn:hover,
+    .human-btn:focus-visible,
+    .human-btn.is-active {
+      transform: translateY(-2px);
+      background: #fffaf1;
+      outline: 2px solid transparent;
+    }
+
+    .human-btn b {
+      display: block;
+      color: var(--orange);
+      font-size: 1.52rem;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .human-btn span {
+      display: block;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      font-weight: 850;
+    }
+
+    .human-panel {
+      min-height: 310px;
+      border-radius: 8px;
+      border: 1px solid rgba(6, 33, 75, 0.13);
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.54)),
+        url("elements_png/07_dual_roles_equal_chain.png") right 18px center / 45% auto no-repeat;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      display: grid;
+      align-content: center;
+    }
+
+    .human-panel h3 {
+      color: var(--navy);
+      font-size: 1.78rem;
+      line-height: 1.28;
+      margin-bottom: 12px;
+      max-width: 600px;
+    }
+
+    .human-panel p {
+      color: #34415a;
+      max-width: 620px;
+      margin-bottom: 0;
+    }
+
+    .project-grid,
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .project-card,
+    .value-card {
+      min-height: 230px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before,
+    .value-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+      background: var(--orange);
+    }
+
+    .project-card b,
+    .value-card b {
+      color: var(--orange);
+      font-size: 0.86rem;
+      font-weight: 950;
+    }
+
+    .project-card h3,
+    .value-card h3 {
+      color: var(--navy);
+      font-size: 1.18rem;
+      line-height: 1.35;
+      margin: 9px 0 12px;
+    }
+
+    .project-card p,
+    .value-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-bottom: 0;
+    }
+
+    .belief {
+      min-height: 390px;
+      border-radius: 8px;
+      padding: 34px;
+      color: var(--navy);
+      border: 1px solid rgba(6, 33, 75, 0.13);
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.56)),
+        url("elements_png/02_constellation_network_transparent.png") right 26px center / min(52%, 590px) auto no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .belief h2 {
+      max-width: 760px;
+    }
+
+    .belief p {
+      max-width: 780px;
+      color: #34415a;
+      font-size: 1.04rem;
+    }
+
+    .quote-line {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-left: 6px solid var(--orange);
+      background: rgba(248, 239, 218, 0.78);
+      border-radius: 8px;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .closing {
+      margin-bottom: 0;
+      min-height: 360px;
+      border-radius: 8px;
+      padding: 42px;
+      background:
+        linear-gradient(90deg, rgba(6, 33, 75, 0.92), rgba(6, 33, 75, 0.72)),
+        url("elements_png/02_constellation_network_transparent.png") right 24px center / min(62%, 680px) auto no-repeat;
+      box-shadow: var(--shadow);
+      color: #fffaf1;
+    }
+
+    .closing h2 {
+      color: #fffaf1;
+      max-width: 800px;
+    }
+
+    .closing p {
+      color: rgba(255, 250, 241, 0.82);
+      max-width: 780px;
+      font-size: 1.04rem;
+    }
+
+    .closing .secondary-link {
+      color: #fffaf1;
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 520ms ease, transform 520ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 0;
+      }
+
+      .nav { justify-content: flex-start; }
+
+      .hero { min-height: auto; padding-top: 44px; }
+
+      .hero-inner,
+      .story-grid,
+      .human-wrap,
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+
+      h1 { font-size: 3.2rem; }
+
+      .hero-visual { min-height: 430px; }
+
+      .signal-row,
+      .timeline,
+      .project-grid,
+      .value-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .source-pill { justify-self: start; }
+
+      .human-panel { background-size: 38% auto; }
+    }
+
+    @media (max-width: 640px) {
+      .topbar { position: static; }
+      .brand { white-space: normal; }
+      .nav a { padding: 6px 8px; }
+
+      .hero { padding-top: 24px; }
+      .hero-inner, section, .signal-row, .topbar-inner { width: min(100% - 24px, var(--max)); }
+
+      h1 { font-size: 2.32rem; }
+      h2 { font-size: 1.74rem; }
+      .hero-lede { font-size: 1.02rem; }
+
+      .signal-row,
+      .timeline,
+      .project-grid,
+      .value-grid,
+      .human-buttons {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions { align-items: stretch; }
+      .primary-link, .secondary-link { width: 100%; }
+
+      .hero-visual { min-height: 350px; }
+      .portrait-card {
+        width: 100%;
+        min-height: 330px;
+        top: 0;
+      }
+      .portrait-card .official-photo {
+        width: 190px;
+        height: 190px;
+        right: 20px;
+        bottom: 24px;
+        border-width: 7px;
+      }
+
+      .portrait-note { width: 88%; }
+
+      .section-illustration {
+        display: none;
+      }
+
+      .panel,
+      .human-panel,
+      .belief,
+      .closing {
+        padding: 20px;
+      }
+
+      .human-panel,
+      .belief {
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.74));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: 1ms !important;
+        animation-duration: 1ms !important;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+
+      html,
+      body {
+        background: #fbf2df !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body::before,
+      .section-illustration {
+        display: none !important;
+      }
+
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .topbar {
+        position: static !important;
+        background: rgba(248, 239, 218, 0.96) !important;
+      }
+
+      .topbar-inner {
+        width: 100% !important;
+        min-height: 42px !important;
+        padding: 0 !important;
+      }
+
+      .nav {
+        display: none !important;
+      }
+
+      .hero {
+        min-height: auto !important;
+        padding: 22px 0 20px !important;
+        overflow: visible !important;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(90deg, rgba(248, 239, 218, 0.98) 0%, rgba(248, 239, 218, 0.88) 100%),
+          url("elements_png/02_constellation_network_transparent.png") right 4% top 12% / 42% auto no-repeat !important;
+      }
+
+      .hero-inner {
+        width: 100% !important;
+        grid-template-columns: 1.1fr 0.72fr !important;
+        gap: 18px !important;
+      }
+
+      h1 {
+        font-size: 42px !important;
+        line-height: 1.08 !important;
+        margin-bottom: 12px !important;
+      }
+
+      h2 {
+        font-size: 24px !important;
+      }
+
+      .hero-lede {
+        font-size: 14px !important;
+        line-height: 1.75 !important;
+      }
+
+      .hero-actions {
+        display: none !important;
+      }
+
+      .hero-visual {
+        min-height: 310px !important;
+      }
+
+      .portrait-card {
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+        width: 100% !important;
+        min-height: 300px !important;
+      }
+
+      .portrait-card .official-photo {
+        width: 168px !important;
+        height: 168px !important;
+        right: 22px !important;
+        bottom: 22px !important;
+      }
+
+      .portrait-note {
+        width: 92% !important;
+        font-size: 12px !important;
+        padding: 12px 14px !important;
+      }
+
+      .signal-row {
+        width: 100% !important;
+        margin: 12px 0 0 !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+      }
+
+      .signal,
+      .timeline-item,
+      .project-card,
+      .value-card {
+        min-height: auto !important;
+        padding: 12px !important;
+        break-inside: avoid;
+      }
+
+      main {
+        padding: 24px 0 0 !important;
+      }
+
+      section {
+        width: 100% !important;
+        margin: 0 0 24px !important;
+        break-inside: avoid;
+      }
+
+      .section-head {
+        display: block !important;
+        margin-bottom: 12px !important;
+      }
+
+      .panel,
+      .human-panel,
+      .belief,
+      .closing {
+        min-height: auto !important;
+        padding: 18px !important;
+        break-inside: avoid;
+      }
+
+      .timeline,
+      .project-grid,
+      .value-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+      }
+
+      .human-wrap {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+
+      .human-buttons {
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+      }
+
+      .human-btn {
+        min-height: 72px !important;
+        padding: 8px 6px !important;
+      }
+
+      .human-panel {
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.72)),
+          url("elements_png/07_dual_roles_equal_chain.png") right 12px center / 32% auto no-repeat !important;
+      }
+
+      .closing {
+        color: #fffaf1 !important;
+      }
+
+      .closing .hero-actions {
+        display: none !important;
+      }
     }
   </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>星星老师</span>
+      </div>
+      <nav class="nav" aria-label="页面导航">
+        <a href="#story">我是谁</a>
+        <a href="#path">经历路径</a>
+        <a href="#human">HUMAN</a>
+        <a href="#projects">现在在做</a>
+        <a href="#value">我能带来</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">自我介绍</p>
+        <h1 aria-label="星星老师">星星老师</h1>
+        <p class="hero-lede">
+          我从<strong>快速消费品的品牌营销</strong>进入商业世界，又在 AI 时代重新走向教育领域。
+          现在我关心的问题是：当 AI 进入学习和创造过程之后，教育如何帮助孩子看见真实的人、解决真实问题，并长出自己的判断与主体性（点燃愿力）。
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#story">理解我的三条线索</a>
+          <a class="secondary-link" href="#human">看 HUMAN 框架</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal" aria-label="超燃营地视觉系统插画">
+        <div class="portrait-card">
+          <div class="portrait-note">
+            从品牌如何影响消费者，到 AI 时代人如何重新学习、创造和解决问题。
+            <small>这是我过去几年工作重心的转向。</small>
+          </div>
+          <img class="official-photo" src="elements_png/10_zhaoxing_watercolor_portrait_v0.1.png" alt="赵星水彩头像">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="signal-row reveal" aria-label="关键信号">
+    <div class="signal"><strong>商业底色</strong><span>可口可乐渠道营销、联合利华品牌、Dove 全球品牌管理</span></div>
+    <div class="signal"><strong>研究底色</strong><span>消费者心理、社会群体行为、品牌战略与组织落地</span></div>
+    <div class="signal"><strong>教育底色</strong><span>教育心理学、教师资格证、教育思想史与项目制学习研究</span></div>
+    <div class="signal"><strong>实践底色</strong><span>超脑 AI for Good 七日营、AI 工作流、青少年真实创造</span></div>
+  </div>
+
   <main>
-    <h1>HiYou</h1>
-    <p>正在打开页面...</p>
-    <p><a href="https://acnqatun5fa0.aiforce.cloud/app/app_178tjmf9b25/">如果没有自动跳转，请点击这里</a></p>
+    <section id="story" class="reveal">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">我是谁</div>
+          <h2>如果用三条线索介绍我：商业系统、教育追问、真实创造。</h2>
+          <p>这三条线索共同构成了我现在的工作方式：既看人，也看系统；既讲理念，也要落到行动。</p>
+        </div>
+      </div>
+
+      <div class="story-grid story-grid-single">
+        <article class="panel" aria-live="polite">
+          <h3 id="story-title">我很早就意识到，商业不是抽象概念，而是一整套抵达真实人的系统。</h3>
+          <p id="story-body">
+            2003 年到上海后，我进入上海申美饮料食品有限公司，也就是可口可乐在中国的重要装瓶体系，从渠道营销和终端执行开始理解一个产品如何真实抵达消费者。后来进入联合利华，转向品牌营销与用户洞察，并曾在伦敦作为高级品牌经理参与 Dove 多芬品牌的全球品牌管理工作。
+          </p>
+          <div class="panel-tags" id="story-tags">
+            <span class="tag">渠道营销</span>
+            <span class="tag">品牌建设</span>
+            <span class="tag">消费者洞察</span>
+            <span class="tag">组织落地</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="path" class="reveal illustrated-section">
+      <img class="section-illustration path-boy" src="elements_png/05_male_student_explorer_creator.png" alt="" aria-hidden="true">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">经历路径</div>
+          <h2>我不是从教育行业内部培养的老师。</h2>
+          <p>我的路径更像是从商业世界、家庭陪伴、AI 工具革命和教育研究中一路转向教育现场。</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <h3>东北财经大学毕业，2003 年到上海</h3>
+          <p>从财经背景进入商业世界，在城市转换和真实岗位中开始理解系统、执行和机会。</p>
+        </article>
+        <article class="timeline-item">
+          <h3>可口可乐装瓶体系与联合利华</h3>
+          <p>从渠道营销到品牌营销，在全球化组织里训练消费者研究、品牌建设和复杂协同。</p>
+        </article>
+        <article class="timeline-item">
+          <h3>创立品牌咨询公司</h3>
+          <p>为本土企业和成长型公司提供品牌战略、定位、营销体系和组织落地服务，也曾以 CMO / COO 角色深度陪跑。</p>
+        </article>
+        <article class="timeline-item">
+          <h3>转向 AI 时代教育研究与实践</h3>
+          <p>研究教育心理学，通过教师资格证相关考试，持续研究建构主义、PBL、设计思维、元认知与 AI 协作。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="human" class="reveal">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">HUMAN 框架</div>
+          <h2>我目前教育工作的核心世界观。</h2>
+          <p>HUMAN 不是把 AI 当万能工具，而是重新追问 AI 时代的人之为人。</p>
+        </div>
+      </div>
+
+      <div class="human-wrap">
+        <div class="human-buttons" role="list" aria-label="HUMAN 维度">
+          <p class="human-hint">点击展开其他部分</p>
+          <button class="human-btn is-active" type="button" data-human="H"><b>H</b><span>Heart<br>仁</span></button>
+          <button class="human-btn" type="button" data-human="U"><b>U</b><span>Understanding<br>知</span></button>
+          <button class="human-btn" type="button" data-human="M"><b>M</b><span>Meta-thinking<br>思</span></button>
+          <button class="human-btn" type="button" data-human="A"><b>A</b><span>Architecting<br>建</span></button>
+          <button class="human-btn" type="button" data-human="N"><b>N</b><span>Navigating<br>行</span></button>
+        </div>
+
+        <article class="human-panel" aria-live="polite">
+          <h3 id="human-title">Heart / 仁：情感联结、价值判断、伦理边界。</h3>
+          <p id="human-body">
+            AI 越强，孩子越需要知道自己为什么创造、为谁创造、什么不能交给机器决定。教育首先要保护人与人之间真实的联结。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal illustrated-section">
+      <img class="section-illustration projects-girl" src="elements_png/06_female_student_cutout_for_poster_v0.4_clean.png" alt="" aria-hidden="true">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">现在在做</div>
+          <h2>我现在的几个长期项目。</h2>
+          <p>它们看起来分属教育、语法、品牌和营地，但底层都在探索一件事：如何让 AI 帮助人做更高质量的判断和创造。</p>
+        </div>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <b>超脑 AI for Good 七日营</b>
+          <h3>让中学生围绕真实社会问题完成可展示、可测试、可反思的项目。</h3>
+          <p>我的角色主要是课程开发和主讲导师，把 AI 工具、设计思维、田野访谈、MVP、伦理边界和路演表达转化成青少年能使用的路径。</p>
+        </article>
+        <article class="project-card">
+          <b>语法项目</b>
+          <h3>探索一种教研型 AI 工作流。</h3>
+          <p>把高考英语真题、语法知识图谱、学生误解和讲解逻辑结合起来，让 AI 帮助老师更准确地理解学生为什么错、该如何讲。</p>
+        </article>
+        <article class="project-card">
+          <b>Project Big</b>
+          <h3>AI-native 的品牌增长与消费者洞察系统。</h3>
+          <p>把品牌咨询经验沉淀成可信推理、证据标注和虚拟消费者方法，帮助企业做更高质量的品牌判断。</p>
+        </article>
+        <article class="project-card">
+          <b>AI for Good 课程体系</b>
+          <h3>持续打磨可复制的课程标准包。</h3>
+          <p>围绕 AI for Good、真实项目、青少年创造力和导师协作，建立能被老师、助教和学生共同使用的教学结构。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="belief">
+        <div class="section-kicker">我的教育立场</div>
+        <h2>我相信孩子原本有好奇心、有创造力，也有能力在真实世界里承担任务。</h2>
+        <p>
+          我从小在一个被充分爱护和允许探索的环境里长大，家庭给了我很多安全感和自由感。后来我才意识到，这会自然地变成一种教育立场：教育要做的，不只是把知识灌进去，而是把这种好奇心重新点亮，并让孩子学会把它变成行动。
+        </p>
+        <p class="quote-line">好的成人不是替孩子完成项目，而是提供边界、方法、资源和托举，让他们真正站出来。</p>
+      </div>
+    </section>
+
+    <section id="value" class="reveal">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">我能带来什么</div>
+          <h2>如果从合作角度概括，我的价值大致有四类。</h2>
+          <p>这部分不是合作方案，只是帮助对方快速理解我在哪些问题上可能有用。</p>
+        </div>
+      </div>
+
+      <div class="value-grid">
+        <article class="value-card">
+          <b>01</b>
+          <h3>品牌和商业系统经验</h3>
+          <p>理解一个组织如何从理念走向产品、用户、传播、运营和增长，也能帮助学生团队看到真实项目背后的商业与组织闭环。</p>
+        </article>
+        <article class="value-card">
+          <b>02</b>
+          <h3>消费者与用户洞察能力</h3>
+          <p>长期受训练于消费者心理、社会群体行为和实证研究，能帮助学生从“我想做什么”走向“用户真实需要什么”。</p>
+        </article>
+        <article class="value-card">
+          <b>03</b>
+          <h3>AI 时代课程与学习设计</h3>
+          <p>关注 AI 如何改变学习结构，而不是简单把 AI 工具塞进课堂。强项是把复杂方法拆成孩子能走完的学习关卡。</p>
+        </article>
+        <article class="value-card">
+          <b>04</b>
+          <h3>成人导师与学生创造之间的桥梁</h3>
+          <p>珍惜孩子真实的好奇心和表达欲，也相信成人要提供边界、方法、资源和托举。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing reveal">
+      <div class="section-kicker">一句话</div>
+      <h2>我最感兴趣的，是和愿意把问题放到真实场景里的人一起试、一起修正、一起成长。</h2>
+      <p>
+        我不认为自己已经有标准答案。恰恰相反，我现在正在组织和参与的，都是那些能把教育理念、AI 工具、真实项目和孩子的主体性放在同一张桌子上认真打磨的教育实验。
+      </p>
+      <div class="hero-actions">
+        <a class="primary-link" href="#top">回到开头</a>
+        <a class="secondary-link" href="#projects">看当前项目</a>
+      </div>
+    </section>
   </main>
+
+  <script>
+    const human = {
+      H: {
+        title: "Heart / 仁：情感联结、价值判断、伦理边界。",
+        body: "AI 越强，孩子越需要知道自己为什么创造、为谁创造、什么不能交给机器决定。教育首先要保护人与人之间真实的联结。"
+      },
+      U: {
+        title: "Understanding / 知：信息捕捉、理解、筛选和证据意识。",
+        body: "AI 可以生成很多答案，但学生要学会判断事实、推测和未经验证的内容，知道证据从哪里来，也知道何时需要回到真实人和真实场景。"
+      },
+      M: {
+        title: "Meta-thinking / 思：本质思辨、多角度判断、对 AI 的审辩能力。",
+        body: "当 AI 给出一个完整答案，学生更需要保留追问能力：为什么这样判断？还有什么可能？这个答案在哪些条件下会失效？"
+      },
+      A: {
+        title: "Architecting / 建：把想法拆解、设计、组织为可执行方案。",
+        body: "真正的创造需要结构。学生要学会把愿望变成问题，把问题变成路径，把路径变成任务、原型、测试和复盘。"
+      },
+      N: {
+        title: "Navigating & Now / 行：在真实反馈中试错、迭代、行动。",
+        body: "学习不是停在理解。孩子要在真实反馈里行动，承认不确定，持续修正，并学会为自己的创造负责。"
+      }
+    };
+
+    const humanButtons = document.querySelectorAll("[data-human]");
+    const humanTitle = document.getElementById("human-title");
+    const humanBody = document.getElementById("human-body");
+
+    humanButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = human[button.dataset.human];
+        humanButtons.forEach((btn) => btn.classList.remove("is-active"));
+        button.classList.add("is-active");
+        humanTitle.textContent = item.title;
+        humanBody.textContent = item.body;
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
+  </script>
 </body>
 </html>
