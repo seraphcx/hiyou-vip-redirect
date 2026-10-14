@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <title>课程｜星星老师</title>
+  <style>
+    :root {
+      --navy: #06214B;
+      --orange: #E95A2A;
+      --green: #596A50;
+      --olive: #879077;
+      --gold: #D99A38;
+      --paper: #F8EFDA;
+      --paper-2: #F1E2C4;
+      --ink: #273044;
+      --muted: #6D705F;
+      --line: rgba(6, 33, 75, 0.14);
+      --white: rgba(255, 255, 255, 0.72);
+      --shadow: 0 18px 48px rgba(6, 33, 75, 0.11);
+      --radius: 8px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.72;
+      background:
+        radial-gradient(circle at 12% 4%, rgba(217, 154, 56, 0.18), transparent 26rem),
+        radial-gradient(circle at 92% 12%, rgba(89, 106, 80, 0.18), transparent 30rem),
+        linear-gradient(180deg, #fbf2df 0%, var(--paper) 58%, #f3e5ca 100%);
+      background-attachment: fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.35;
+      background-image:
+        linear-gradient(rgba(6, 33, 75, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6, 33, 75, 0.025) 1px, transparent 1px);
+      background-size: 30px 30px;
+      z-index: -2;
+    }
+
+    a, button { color: inherit; font: inherit; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(6, 33, 75, 0.11);
+      background: rgba(248, 239, 218, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .topbar-inner {
+      width: min(100% - 32px, var(--max));
+      min-height: 62px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 27px;
+      height: 27px;
+      border-radius: 8px;
+      background: var(--orange);
+      position: relative;
+      box-shadow: 0 8px 18px rgba(233, 90, 42, 0.24);
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: var(--paper);
+    }
+
+    .brand-mark::before {
+      width: 12px;
+      height: 12px;
+      left: 5px;
+      top: 5px;
+    }
+
+    .brand-mark::after {
+      width: 7px;
+      height: 7px;
+      right: 5px;
+      bottom: 5px;
+      opacity: 0.72;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: rgba(6, 33, 75, 0.78);
+      font-size: 0.92rem;
+      padding: 7px 10px;
+      border-radius: 8px;
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      color: var(--navy);
+      background: rgba(255, 255, 255, 0.62);
+      outline: 2px solid transparent;
+    }
+
+    .hero {
+      min-height: calc(100vh - 62px);
+      display: grid;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 64px 0 44px;
+      border-bottom: 1px solid rgba(6, 33, 75, 0.08);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(248, 239, 218, 0.98) 0%, rgba(248, 239, 218, 0.88) 48%, rgba(248, 239, 218, 0.38) 100%),
+        url("elements_png/02_constellation_network_transparent.png") right 8% top 12% / min(62vw, 760px) auto no-repeat;
+      z-index: -2;
+    }
+
+    .hero-inner {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.78fr);
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-weight: 900;
+      margin: 0 0 20px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 70px;
+      height: 6px;
+      background: var(--orange);
+      display: inline-block;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      color: var(--navy);
+      font-size: 3rem;
+      line-height: 1.04;
+      margin-bottom: 22px;
+      font-weight: 950;
+    }
+
+    .hero-lede {
+      max-width: 760px;
+      color: #26354f;
+      font-size: 1.18rem;
+      line-height: 1.95;
+      margin-bottom: 28px;
+    }
+
+    .hero-lede strong {
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .primary-link,
+    .secondary-link {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    .primary-link {
+      color: #fffaf1;
+      background: var(--orange);
+      box-shadow: 0 12px 24px rgba(233, 90, 42, 0.24);
+    }
+
+    .secondary-link {
+      color: var(--navy);
+      background: rgba(255, 255, 255, 0.64);
+      border: 1px solid rgba(6, 33, 75, 0.16);
+    }
+
+    .hero-visual {
+      min-height: 620px;
+      position: relative;
+    }
+
+    .portrait-card {
+      position: absolute;
+      right: 0;
+      top: 8%;
+      width: min(90%, 405px);
+      min-height: 500px;
+      border-radius: 8px;
+      border: 1px solid rgba(6, 33, 75, 0.12);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.38)),
+        url("elements_png/04_ai_light_path_transparent.png") center 52% / 92% auto no-repeat;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 24px;
+    }
+
+    .portrait-card .official-photo {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      right: 42px;
+      bottom: 34px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 10px solid rgba(248, 239, 218, 0.76);
+      box-shadow: 0 20px 36px rgba(6, 33, 75, 0.18);
+    }
+
+    .portrait-note {
+      position: relative;
+      z-index: 2;
+      width: 82%;
+      border-left: 6px solid var(--orange);
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 8px;
+      padding: 16px 18px;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .portrait-note small {
+      display: block;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    .signal-row {
+      width: min(100% - 32px, var(--max));
+      margin: -24px auto 0;
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .signal,
+    .card,
+    .timeline-item,
+    .panel,
+    .project-card,
+    .value-card {
+      border-radius: 8px;
+      border: 1px solid rgba(6, 33, 75, 0.13);
+      background: rgba(255, 255, 255, 0.68);
+      box-shadow: 0 12px 34px rgba(6, 33, 75, 0.07);
+    }
+
+    .signal {
+      min-height: 92px;
+      padding: 16px;
+    }
+
+    .signal strong {
+      display: block;
+      color: var(--navy);
+      line-height: 1.42;
+      margin-bottom: 6px;
+    }
+
+    .signal span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    main {
+      padding: 76px 0 86px;
+    }
+
+    section {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto 86px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(260px, 0.28fr);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      color: var(--orange);
+      font-weight: 950;
+      font-size: 0.94rem;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 2.3rem;
+      line-height: 1.22;
+      margin-bottom: 12px;
+      font-weight: 950;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .source-pill {
+      justify-self: end;
+      align-self: center;
+      border: 1px solid rgba(6, 33, 75, 0.16);
+      background: rgba(255, 255, 255, 0.54);
+      color: var(--navy);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.9rem;
+      font-weight: 900;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .story-grid-single {
+      grid-template-columns: 1fr;
+    }
+
+    .panel {
+      min-height: 430px;
+      padding: 28px;
+      background:
+        linear-gradient(120deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.48)),
+        url("elements_png/03_task_bubbles_transparent.png") right 22px top 28px / 48% auto no-repeat;
+      display: grid;
+      align-content: center;
+    }
+
+    .panel h3 {
+      color: var(--navy);
+      font-size: 1.85rem;
+      line-height: 1.27;
+      margin-bottom: 14px;
+      max-width: 680px;
+    }
+
+    .panel p {
+      color: #34415a;
+      max-width: 720px;
+      font-size: 1.03rem;
+    }
+
+    .panel-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 9px;
+      border-radius: 8px;
+      color: var(--navy);
+      background: rgba(248, 239, 218, 0.78);
+      border: 1px solid rgba(6, 33, 75, 0.12);
+      font-size: 0.86rem;
+      font-weight: 850;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      counter-reset: step;
+    }
+
+    .illustrated-section {
+      position: relative;
+    }
+
+    .section-illustration {
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
+      object-fit: contain;
+      opacity: 0.18;
+      filter: drop-shadow(0 18px 22px rgba(6, 33, 75, 0.08));
+    }
+
+    .section-illustration.path-boy {
+      width: 230px;
+      right: 2%;
+      top: 20px;
+    }
+
+    .section-illustration.projects-girl {
+      width: 250px;
+      left: -12px;
+      top: 18px;
+      opacity: 0.16;
+    }
+
+    .illustrated-section > .section-head,
+    .illustrated-section > .timeline,
+    .illustrated-section > .project-grid {
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-item {
+      position: relative;
+      min-height: 250px;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .timeline-item::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      display: inline-grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fffaf1;
+      font-weight: 950;
+      margin-bottom: 18px;
+    }
+
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: var(--orange);
+    }
+
+    .timeline-item h3 {
+      color: var(--navy);
+      font-size: 1.16rem;
+      line-height: 1.34;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-bottom: 0;
+    }
+
+    .human-wrap {
+      display: grid;
+      grid-template-columns: 0.72fr 1.28fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .human-buttons {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      align-content: start;
+    }
+
+    .human-hint {
+      grid-column: 1 / -1;
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .human-btn {
+      min-height: 104px;
+      border: 1px solid rgba(6, 33, 75, 0.14);
+      background: rgba(255, 255, 255, 0.58);
+      color: var(--navy);
+      border-radius: 8px;
+      padding: 12px 8px;
+      cursor: pointer;
+      box-shadow: 0 10px 26px rgba(6, 33, 75, 0.06);
+      transition: transform 180ms ease, background 180ms ease;
+      overflow-wrap: anywhere;
+    }
+
+    .human-btn:hover,
+    .human-btn:focus-visible,
+    .human-btn.is-active {
+      transform: translateY(-2px);
+      background: #fffaf1;
+      outline: 2px solid transparent;
+    }
+
+    .human-btn b {
+      display: block;
+      color: var(--orange);
+      font-size: 1.52rem;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .human-btn span {
+      display: block;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      font-weight: 850;
+    }
+
+    .human-panel {
+      min-height: 310px;
+      border-radius: 8px;
+      border: 1px solid rgba(6, 33, 75, 0.13);
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.54)),
+        url("elements_png/07_dual_roles_equal_chain.png") right 18px center / 45% auto no-repeat;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      display: grid;
+      align-content: center;
+    }
+
+    .human-panel h3 {
+      color: var(--navy);
+      font-size: 1.78rem;
+      line-height: 1.28;
+      margin-bottom: 12px;
+      max-width: 600px;
+    }
+
+    .human-panel p {
+      color: #34415a;
+      max-width: 620px;
+      margin-bottom: 0;
+    }
+
+    .project-grid,
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .project-card,
+    .value-card {
+      min-height: 230px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before,
+    .value-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+      background: var(--orange);
+    }
+
+    .project-card b,
+    .value-card b {
+      color: var(--orange);
+      font-size: 0.86rem;
+      font-weight: 950;
+    }
+
+    .project-card h3,
+    .value-card h3 {
+      color: var(--navy);
+      font-size: 1.18rem;
+      line-height: 1.35;
+      margin: 9px 0 12px;
+    }
+
+    .project-card p,
+    .value-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-bottom: 0;
+    }
+
+    .belief {
+      min-height: 390px;
+      border-radius: 8px;
+      padding: 34px;
+      color: var(--navy);
+      border: 1px solid rgba(6, 33, 75, 0.13);
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.56)),
+        url("elements_png/02_constellation_network_transparent.png") right 26px center / min(52%, 590px) auto no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .belief h2 {
+      max-width: 760px;
+    }
+
+    .belief p {
+      max-width: 780px;
+      color: #34415a;
+      font-size: 1.04rem;
+    }
+
+    .quote-line {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-left: 6px solid var(--orange);
+      background: rgba(248, 239, 218, 0.78);
+      border-radius: 8px;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .closing {
+      margin-bottom: 0;
+      min-height: 360px;
+      border-radius: 8px;
+      padding: 42px;
+      background:
+        linear-gradient(90deg, rgba(6, 33, 75, 0.92), rgba(6, 33, 75, 0.72)),
+        url("elements_png/02_constellation_network_transparent.png") right 24px center / min(62%, 680px) auto no-repeat;
+      box-shadow: var(--shadow);
+      color: #fffaf1;
+    }
+
+    .closing h2 {
+      color: #fffaf1;
+      max-width: 800px;
+    }
+
+    .closing p {
+      color: rgba(255, 250, 241, 0.82);
+      max-width: 780px;
+      font-size: 1.04rem;
+    }
+
+    .closing .secondary-link {
+      color: #fffaf1;
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 520ms ease, transform 520ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 0;
+      }
+
+      .nav { justify-content: flex-start; }
+
+      .hero { min-height: auto; padding-top: 44px; }
+
+      .hero-inner,
+      .story-grid,
+      .human-wrap,
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+
+      h1 { font-size: 3.2rem; }
+
+      .hero-visual { min-height: 430px; }
+
+      .signal-row,
+      .timeline,
+      .project-grid,
+      .value-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .source-pill { justify-self: start; }
+
+      .human-panel { background-size: 38% auto; }
+    }
+
+    @media (max-width: 640px) {
+      .topbar { position: static; }
+      .brand { white-space: normal; }
+      .nav a { padding: 6px 8px; }
+
+      .hero { padding-top: 24px; }
+      .hero-inner, section, .signal-row, .topbar-inner { width: min(100% - 24px, var(--max)); }
+
+      h1 { font-size: 2.32rem; }
+      h2 { font-size: 1.74rem; }
+      .hero-lede { font-size: 1.02rem; }
+
+      .signal-row,
+      .timeline,
+      .project-grid,
+      .value-grid,
+      .human-buttons {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions { align-items: stretch; }
+      .primary-link, .secondary-link { width: 100%; }
+
+      .hero-visual { min-height: 350px; }
+      .portrait-card {
+        width: 100%;
+        min-height: 330px;
+        top: 0;
+      }
+      .portrait-card .official-photo {
+        width: 190px;
+        height: 190px;
+        right: 20px;
+        bottom: 24px;
+        border-width: 7px;
+      }
+
+      .portrait-note { width: 88%; }
+
+      .section-illustration {
+        display: none;
+      }
+
+      .panel,
+      .human-panel,
+      .belief,
+      .closing {
+        padding: 20px;
+      }
+
+      .human-panel,
+      .belief {
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.74));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: 1ms !important;
+        animation-duration: 1ms !important;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+
+      html,
+      body {
+        background: #fbf2df !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body::before,
+      .section-illustration {
+        display: none !important;
+      }
+
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      .topbar {
+        position: static !important;
+        background: rgba(248, 239, 218, 0.96) !important;
+      }
+
+      .topbar-inner {
+        width: 100% !important;
+        min-height: 42px !important;
+        padding: 0 !important;
+      }
+
+      .nav {
+        display: none !important;
+      }
+
+      .hero {
+        min-height: auto !important;
+        padding: 22px 0 20px !important;
+        overflow: visible !important;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(90deg, rgba(248, 239, 218, 0.98) 0%, rgba(248, 239, 218, 0.88) 100%),
+          url("elements_png/02_constellation_network_transparent.png") right 4% top 12% / 42% auto no-repeat !important;
+      }
+
+      .hero-inner {
+        width: 100% !important;
+        grid-template-columns: 1.1fr 0.72fr !important;
+        gap: 18px !important;
+      }
+
+      h1 {
+        font-size: 42px !important;
+        line-height: 1.08 !important;
+        margin-bottom: 12px !important;
+      }
+
+      h2 {
+        font-size: 24px !important;
+      }
+
+      .hero-lede {
+        font-size: 14px !important;
+        line-height: 1.75 !important;
+      }
+
+      .hero-actions {
+        display: none !important;
+      }
+
+      .hero-visual {
+        min-height: 310px !important;
+      }
+
+      .portrait-card {
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+        width: 100% !important;
+        min-height: 300px !important;
+      }
+
+      .portrait-card .official-photo {
+        width: 168px !important;
+        height: 168px !important;
+        right: 22px !important;
+        bottom: 22px !important;
+      }
+
+      .portrait-note {
+        width: 92% !important;
+        font-size: 12px !important;
+        padding: 12px 14px !important;
+      }
+
+      .signal-row {
+        width: 100% !important;
+        margin: 12px 0 0 !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+      }
+
+      .signal,
+      .timeline-item,
+      .project-card,
+      .value-card {
+        min-height: auto !important;
+        padding: 12px !important;
+        break-inside: avoid;
+      }
+
+      main {
+        padding: 24px 0 0 !important;
+      }
+
+      section {
+        width: 100% !important;
+        margin: 0 0 24px !important;
+        break-inside: avoid;
+      }
+
+      .section-head {
+        display: block !important;
+        margin-bottom: 12px !important;
+      }
+
+      .panel,
+      .human-panel,
+      .belief,
+      .closing {
+        min-height: auto !important;
+        padding: 18px !important;
+        break-inside: avoid;
+      }
+
+      .timeline,
+      .project-grid,
+      .value-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+      }
+
+      .human-wrap {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+
+      .human-buttons {
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+      }
+
+      .human-btn {
+        min-height: 72px !important;
+        padding: 8px 6px !important;
+      }
+
+      .human-panel {
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.72)),
+          url("elements_png/07_dual_roles_equal_chain.png") right 12px center / 32% auto no-repeat !important;
+      }
+
+      .closing {
+        color: #fffaf1 !important;
+      }
+
+      .closing .hero-actions {
+        display: none !important;
+      }
+    }
+
+    #contact {
+      margin-top: 24px;
+      border-radius: 8px;
+      padding: 42px;
+      background:
+        linear-gradient(90deg, rgba(6, 33, 75, 0.93), rgba(6, 33, 75, 0.72)),
+        url("elements_png/02_constellation_network_transparent.png") right 24px center / min(62%, 680px) auto no-repeat;
+      box-shadow: var(--shadow);
+      color: #fffaf1;
+    }
+    #contact .section-kicker { color: var(--gold); }
+    #contact h2 { color: #fffaf1; }
+    #contact p { color: rgba(255, 250, 241, 0.82); max-width: 46em; }
+    #contact .primary-link { font-size: 1.05rem; letter-spacing: 0.4px; }
+    .contact-ghost {
+      color: #fffaf1;
+      border: 1px solid rgba(255, 250, 241, 0.42);
+      background: rgba(255, 250, 241, 0.08);
+    }
+
+    /* ── 课程页补充样式（其余全部继承首页） ─────────── */
+    .nav a.is-current { color: #fffaf1; background: var(--navy); }
+    .nav a.is-current:hover,
+    .nav a.is-current:focus-visible { color: #fffaf1; background: var(--navy); }
+    .course-list { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .course-card { position: relative; background: var(--white);
+      border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 26px 24px;
+      box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 8px; }
+    .course-card .lock { width: 38px; height: 38px; border-radius: 50%; background: var(--navy);
+      display: grid; place-items: center; margin-bottom: 6px; }
+    .course-card .lock svg { width: 19px; height: 19px; }
+    .course-card b { color: var(--orange); font-size: .82rem; letter-spacing: .08em; font-weight: 950; }
+    .course-card h3 { margin: 0; color: var(--navy); font-size: 1.32rem; font-weight: 950; line-height: 1.35; }
+    .course-card p { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.75; }
+    .course-card .go { margin-top: auto; padding-top: 16px; }
+    .course-meta { font-size: .82rem !important; color: var(--olive) !important; }
+    .course-note { font-size: .82rem !important; }
+    .back-home { display: inline-block; margin-top: 26px; font-weight: 800; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>星星老师</span>
+      </div>
+      <nav class="nav" aria-label="页面导航">
+        <a href="index.html#story">我是谁</a>
+        <a href="index.html#path">经历路径</a>
+        <a href="index.html#human">HUMAN</a>
+        <a href="index.html#projects">现在在做</a>
+        <a href="index.html#value">我能带来</a>
+        <a href="courses.html" class="is-current" aria-current="page">课程</a>
+        <a href="index.html#contact">联系我</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="courses" class="reveal">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">课程</div>
+        <h2>已上线的课程。</h2>
+        <p>
+          这里的课程不是录播视频，而是可以一边读一边动手的互动页面：每一步都给出处，
+          每一讲都留下「今晚就能做的一件事」。目前开放一门给家长的课。
+        </p>
+      </div>
+    </div>
+
+    <div class="course-list">
+      <article class="course-card">
+        <span class="lock" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none">
+          <rect x="4" y="10.5" width="16" height="10.5" rx="2.4" fill="#F8EFDA"></rect>
+          <path d="M8 10.5V7.8a4 4 0 1 1 8 0v2.7" stroke="#F8EFDA" stroke-width="2" stroke-linecap="round"></path>
+          <circle cx="12" cy="15.6" r="1.5" fill="#E95A2A"></circle></svg></span>
+        <b>家长课 · 2026</b>
+        <h3>孩子是不是一个人？</h3>
+        <p>
+          给走中高考这条路的家长。八讲：从一个两万年没换过说明书的大脑，到这台筛选机器怎么运转，
+          再到你今晚就能做的四步。全部论点与数据都给出处，可逐条核查。
+        </p>
+        <p class="course-meta">约 40 分钟读完 · 11 个互动组件 · 34 条理论依据</p>
+        <div class="go"><a class="primary-link" href="course-parent.html">用账号进入 →</a></div>
+        <p class="course-note">本课程内容已加密，需要用户名与密码；账号由星星老师发放。</p>
+      </article>
+    </div>
+
+    <p class="back-home"><a href="index.html">← 回到首页</a></p>
+  </section>
+
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll(".reveal").forEach(function (n) { observer.observe(n); });
+    })();
+  </script>
+</body>
+</html>
