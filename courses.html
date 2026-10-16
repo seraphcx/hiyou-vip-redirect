@@ -238,6 +238,19 @@
       border: 1px solid rgba(6, 33, 75, 0.16);
     }
 
+    /* 「用账号进入」：暂未开放注册，按钮置灰但仍可点（朋友要靠它进来看课） */
+    .primary-link.is-off {
+      color: var(--muted);
+      background: rgba(6, 33, 75, 0.07);
+      box-shadow: none;
+      border: 1px solid rgba(6, 33, 75, 0.14);
+    }
+    .primary-link.is-off:hover {
+      color: var(--navy);
+      background: rgba(6, 33, 75, 0.11);
+      box-shadow: none;
+    }
+
     .hero-visual {
       min-height: 620px;
       position: relative;
@@ -1073,8 +1086,7 @@
         <div class="section-kicker">课程</div>
         <h2>已上线的课程。</h2>
         <p>
-          这里的课程不是录播视频，而是可以一边读一边动手的互动页面：每一步都给出处，
-          每一讲都留下「今晚就能做的一件事」。目前开放一门给家长的课。
+          这里的课程不是录播视频，而是可以一边读一边动手的互动页面。
         </p>
       </div>
     </div>
@@ -1089,16 +1101,14 @@
         <h3>首先，孩子是一个“人”</h3>
         <p>
           给走中高考这条路的家长。八讲：从一个两万年没换过说明书的大脑，到这台筛选机器怎么运转，
-          再到你今晚就能做的四步。全部论点与数据都给出处，可逐条核查。
+          再到你今晚就能做的四步。
         </p>
         <p class="course-meta">约 40 分钟读完 · 11 个互动组件 · 34 条理论依据</p>
-        <p class="course-price"><b>暂未对外开放</b><span>欢迎留言 · 请星星老师喝杯咖啡</span></p>
+        <p class="course-price"><b>暂未开放注册</b></p>
         <div class="go">
-          <a class="primary-link" href="course-parent.html">用账号进入 →</a>
+          <a class="primary-link is-off" href="course-parent.html">用账号进入 →</a>
           <a class="enroll-link" href="https://acnqatun5fa0.feishu.cn/share/base/shrcnpoY7BaxnCzqvYzyIDwM7xh" target="_blank" rel="noopener">请星星老师喝杯咖啡 →</a>
         </div>
-        <p class="course-note">本课程内容已加密，需要用户名与密码；账号由星星老师发放。
-          想看的话，点「请星星老师喝杯咖啡」留个言，我看到就回你。</p>
       </article>
     </div>
 
