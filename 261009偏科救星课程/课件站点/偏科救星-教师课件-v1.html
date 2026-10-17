@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>《制作你自己的偏科救星》教师课件 v1.1 · 六周</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 124'%3E%3Cpath d='M50,10 C68,40 82,58 82,82 A32,32 0 1,1 18,82 C18,58 32,40 50,10 Z' fill='none' stroke='%231B1A17' stroke-width='7' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='88' r='11' fill='%23E85A17'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;500;600&family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#FAF6EF;--ivory-deep:#F4EEE2;--ink:#1B1A17;--ink-soft:#4A463E;--ink-faint:#8A8478;--hairline:#E3DCCB;--orange:#E85A17;--orange-deep:#C54A10;
+--serif:'Playfair Display','Noto Serif SC',Georgia,'Songti SC','SimSun',serif;--sans:'Inter','Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.9;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:0 44px}
+nav{border-bottom:1px solid var(--hairline);background:rgba(250,246,239,.94);position:sticky;top:0;z-index:9;backdrop-filter:blur(8px)}
+.ni{max-width:980px;margin:0 auto;padding:12px 44px;display:flex;align-items:center;gap:12px}
+.ni .m{height:26px}.ni b{font-family:var(--serif);font-size:17px}.ni .en{font-size:8.5px;letter-spacing:.3em;color:var(--ink-faint)}
+.ni .tag{margin-left:auto;font-size:11px;letter-spacing:.2em;color:var(--ink-soft)}
+header{padding:70px 0 44px;border-bottom:1px solid var(--hairline)}
+.kicker{font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:24px}
+h1{font-family:var(--serif);font-size:clamp(30px,4vw,44px);font-weight:600;line-height:1.35;margin-bottom:14px}
+.lede{font-family:var(--serif);font-size:19px;color:var(--ink-soft)}
+.howto{margin-top:30px;border:1px solid var(--hairline);background:var(--ivory-deep);padding:22px 26px;font-size:13px;color:var(--ink-soft);line-height:1.9}
+.howto b{color:var(--ink)}
+/* ---- 周卡（模具4 骨架） ---- */
+.wk{margin:56px 0 0;border:1px solid var(--hairline);background:#fff}
+.wk-head{display:flex;align-items:baseline;gap:18px;padding:22px 30px;border-bottom:1px solid var(--hairline);background:var(--ivory-deep)}
+.wk-no{font-family:var(--serif);font-style:italic;font-size:34px;color:var(--orange);line-height:1}
+.wk-title{font-family:var(--serif);font-size:21px;font-weight:600}
+.wk-gate{margin-left:auto;font-size:10.5px;letter-spacing:.24em;color:var(--orange);text-transform:uppercase}
+.goal{padding:18px 30px;border-bottom:1px solid var(--hairline);font-size:14.5px}
+.seg{padding:20px 30px;border-bottom:1px solid var(--hairline)}
+.seg .t{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--orange);margin-bottom:8px}
+.who{font-size:14px;color:var(--ink-soft);margin-bottom:6px}
+.who b{color:var(--ink)}
+.say{margin-top:10px;border-left:2px solid var(--orange);padding:6px 0 6px 16px;font-size:14px;color:var(--ink);font-style:normal}
+.cut{margin-top:8px;font-size:12.5px;color:var(--ink-faint)}
+.method,.gb,.out,.ai,.hw,.mat{padding:16px 30px;border-bottom:1px solid var(--hairline);font-size:13.5px;color:var(--ink-soft)}
+.gb .good{margin-bottom:8px}.gb .bad{color:var(--orange-deep)}
+.ai .red{color:var(--orange-deep)}
+.wk > :last-child{border-bottom:none}
+footer{padding:50px 0 80px;margin-top:56px;border-top:1px solid var(--hairline)}
+.foot{display:flex;gap:16px;font-size:12px;color:var(--ink-faint);letter-spacing:.06em}
+/* ---- 课程说明书 · 白话版（2026-10-17 赵星定） ---- */
+.intro{margin:44px 0 0;border:1px solid var(--hairline);background:var(--ivory-deep);padding:30px 34px}
+.intro h2{font-family:var(--serif);font-size:26px;font-weight:600;line-height:1.45;margin:0 0 16px}
+.intro p{font-size:14.5px;color:var(--ink-soft);margin-bottom:12px}
+.intro p b{color:var(--ink)}
+.intro .say{margin:16px 0 4px}
+.intro .fb{display:inline-block;margin-top:14px;padding:10px 24px;border:1px solid var(--orange);color:var(--orange-deep);font-size:14px;letter-spacing:.05em;text-decoration:none;transition:background .2s,color .2s}
+.intro .fb:hover{background:var(--orange);color:#fff}
+@media(max-width:760px){.wrap,.ni{padding-left:20px;padding-right:20px}.wk-head{flex-wrap:wrap;gap:10px}.intro{padding:22px 20px}}
+</style>
+</head>
+<body>
+
+<nav><div class="ni">
+  <svg class="m" viewBox="0 0 100 124" aria-hidden="true"><path d="M50,10 C68,40 82,58 82,82 A32,32 0 1,1 18,82 C18,58 32,40 50,10 Z" fill="none" stroke="#1B1A17" stroke-width="5" stroke-linejoin="round"/><circle cx="50" cy="88" r="9.5" fill="#E85A17"/></svg>
+  <div><b>偏科救星</b><div class="en">MAKE YOUR OWN TUTOR</div></div>
+  <div class="tag">教师课件 v1.1 · 六周 · 2026-10-09</div>
+</div></nav>
+
+<header class="wrap">
+  <div class="kicker">制作你自己的偏科救星 · 教师课件</div>
+  <h1>教会孩子做自己的老师——顺便把试考了</h1>
+  <p class="lede">六个星期，一门他最怕的课。产出四件：知识地图、断点清单、他自己的 AI 教练、一次不看稿的答辩。</p>
+  <div class="howto">
+    <b>怎么用这份课件</b>：每周一个块，骨架固定（激活 12′ → 示证 24′ → 应用 60′ → 整合 24′），照着上。<b>「老师做」「学员做」分开写</b>，斜体橙字那句是可以直接照读的话。每块最底下是材料与课前检查。规矩提醒：应用段成人消失，只应求助；每周必须有一次对真人的动作；AI 那栏的级别（R6-1/2/3）不许现场改。总纲见 <b>00_课程设计总纲-v1</b>。
+  </div>
+</header>
+
+<div class="wrap intro">
+  <div class="kicker">课程说明书 · 白话版</div>
+  <h2>用 AI，给孩子造一个「他自己的老师」</h2>
+  <p>这门课的关键所在，一句话说完：<b>老师不是买来的，是孩子自己动手造出来的。</b>不是买个 AI 会员丢给孩子自学那种——我们把自己压箱底的定制化「深度研究」Skill 也放进来了，让孩子像研究员对待课题一样，直面自己最怕的那门课。</p>
+  <p>六个星期，走一遍完整的研究流程：<b>摸家底</b>（这门课到底有多少知识点）→ <b>染断点</b>（我到底不会哪几条）→ <b>写自己的知识卡</b> → <b>给 AI 立规矩</b>（约束卡：不许直接报答案）→ <b>出题考它、翻车修它</b> → 最后当着家长的面，不看稿讲清楚「我的老师是怎么教我的」。</p>
+  <p>说白了，这就是把 <b>AI Native（AI 原生）的工作流</b>整个嵌进孩子的学习流：AI 当队友，人当主力。六周之后，孩子带走的不只是一门课的起色，更是一套「没有老师盯着，我也能自己推进」的硬功夫——学术点说，叫 AI 时代的自驱型学习人才；搁家里说，叫这孩子终于会自己学了。</p>
+  <div class="say">调侃一句：这事儿的意义，早就不是「请星星老师喝杯咖啡」能打发的了——当然，咖啡照旧欢迎。你要是也觉得「这像是未来教育该有的样子」，或者有一肚子话想夸想怼，都请留言告诉我们。需求够真，课就认真开。</div>
+  <a class="fb" href="https://acnqatun5fa0.feishu.cn/share/base/shrcnpoY7BaxnCzqvYzyIDwM7xh" target="_blank" rel="noopener">留言反馈 →</a>
+</div>
+
+<main class="wrap">
+
+<!-- W1 -->
+<div class="wk" id="w01">
+  <div class="wk-head"><span class="wk-no">W1</span><span class="wk-title">「这门课到底有多少个知识点？」</span><span class="wk-gate">关一 · T1 知识地图</span></div>
+  <div class="goal"><b>今天一句话目标：</b>把自己那门课的全部章节摸完，列出一版自己写的知识点清单 v0。</div>
+  <div class="seg seg1"><div class="t">激活 12′</div>
+    <div class="who"><b>老师做：</b>让每人说出这门课"最怕的一章"，只说章名，不许解释。</div>
+    <div class="who"><b>学员做：</b>轮流说，写到白板/共享文档上——这张"怕章榜"全程贴着，结课回看。</div>
+    <div class="say">"先别急着说不会。今天我们只干一件事：把这门课的家底摸清楚。摸完你会发现，'怕'的那几章，其实没几页。"</div>
+  </div>
+  <div class="seg seg2"><div class="t">示证 24′</div>
+    <div class="who"><b>老师做：</b>演示一个方法点——<b>三源对照法</b>：教材目录 × 考纲 × 近两次考卷，三边对齐，列出一章的知识点。只演示一章，现场列给他们看。</div>
+    <div class="who"><b>学员做：</b>看演示时在自己那门课里挑好对应的一章，先不动手。</div>
+    <div class="cut">时间不够：三源对照只演示教材目录×考纲两边，考卷对照挪到 W2。</div>
+  </div>
+  <div class="seg seg3"><div class="t">应用 60′</div>
+    <div class="who"><b>老师做：</b>消失。只在被举手求助时出现，且只回一句"你先按你自己的理解列，列完再说"。</div>
+    <div class="who"><b>学员做：</b>逐章列知识点清单（自摸版），写在表格里：章号｜知识点｜我懂/不懂/不确定。全程 AI 不许碰；列完三章以上的，可开 AI 做一轮查漏（R6-1），AI 补的条目单独标色。</div>
+  </div>
+  <div class="seg seg4"><div class="t">整合 24′</div>
+    <div class="who"><b>老师做：</b>每人 Critique 一条（只指向"哪里还没覆盖"，不说"列得好"）。</div>
+    <div class="who"><b>学员做：</b>当堂补成 v1 → 三行记录（我的决定／依据的证据／AI 的贡献）→ 认领下周动作。</div>
+    <div class="say">"下周我们干一件更狠的事：从这几十条里，把你真正不会的挑出来。敢来吗？"</div>
+  </div>
+  <div class="method"><b>本周方法点：</b>三源对照——教材目录是"教过什么"，考纲是"要考什么"，考卷是"真的怎么考"。三边都对上的，才是真知识点。</div>
+  <div class="method"><b>三感自检（教练课前 5 分钟看一眼）：</b>参与=逐章列清单，写完一章贴一张「已完成」标／掌控=先列哪一章由他定（可以不从怕章榜第一名的那章开始）／进展=从「我以为这门课有几百个知识点」到白板上出现具体条数</div>
+  <div class="gb"><div class="good"><b>这样做：</b>"第 3 章第 2 节：一元二次方程判别式——不懂"（每条都能翻到书页）。</div><div class="bad"><b>别这样：</b>"函数那一块不太熟"——这等于没列，因为看不出下一页该翻哪。</div></div>
+  <div class="out"><b>本周产出：</b>知识地图 v1（表格，全章节覆盖）＋"怕章榜"初版。<br><b>过关判据：</b>章节覆盖率 100%；每章 ≥8 条知识点；AI 补充条目单独标色且总数不超过自摸条数的一半。</div>
+  <div class="ai"><b>AI 怎么用：</b>R6-1 查询（先自摸、后查漏，双清单都留）。<span class="red">红线：不许让 AI 代列第一版——今天列不全是正常的，代列了这门课就白上了。</span></div>
+  <div class="hw"><b>课后任务：</b>把剩下没摸完的章列完；把"怕章榜"念给家里听一遍，让家里人猜猜哪章排第一。<br><b>下周带什么来：</b>完整 v1 地图 + 最近两次考卷原件。</div>
+  <div class="mat"><b>材料与工具：</b>教材、考纲 PDF、在线表格模板（课前建好每人一份）。<br><b>老师提前 10 分钟检查：</b>每人表格链接可编辑；确认每人的教材版本一致。</div>
+</div>
+
+<!-- W2 -->
+<div class="wk" id="w02">
+  <div class="wk-head"><span class="wk-no">W2</span><span class="wk-title">「我到底不会哪些？」</span><span class="wk-gate">关二 · T2 断点清单</span></div>
+  <div class="goal"><b>今天一句话目标：</b>用两次真实考卷给自己的知识地图染色——红黄绿，产出一版断点清单。</div>
+  <div class="seg seg1"><div class="t">激活 12′</div>
+    <div class="who"><b>老师做：</b>开场提取——不许看任何东西，说出上周地图里三条"不懂"的知识点。</div>
+    <div class="who"><b>学员做：</b>轮流说，其他人对着地图帮着核对"上周你是不是这么写的"。</div>
+    <div class="say">"回忆是最便宜的学习。今天说出来的每一条，下周还会再考你一次。"</div>
+  </div>
+  <div class="seg seg2"><div class="t">示证 24′</div>
+    <div class="who"><b>老师做：</b>演示一个方法点——<b>错题三问</b>：这道题考哪个知识点？我卡在第几步？当时我为什么那么想？只演示一道真题的完整三问。</div>
+    <div class="who"><b>学员做：</b>跟着把自己考卷里最扎眼的一道错题按三问拆开。</div>
+    <div class="cut">时间不够：三问只做"考哪个知识点+卡在第几步"，第三问下周再补。</div>
+  </div>
+  <div class="seg seg3"><div class="t">应用 60′</div>
+    <div class="who"><b>老师做：</b>消失，巡场只做一件事：看到有人写"粗心"就问"粗心是哪一步？写出来"。</div>
+    <div class="who"><b>学员做：</b>把两次考卷的每道错题过三问，回地图上染色：连续做对=绿／会但不稳=黄／不会=红；红点逐条写"我卡在第几步"。可开 AI 帮忙归类错题类型（R6-1），归类结果要自己点头。<br><b>最后 10 分钟 · 真实用户位：</b>同桌互换断点清单，逐条问对方「这条卡在哪一步」——被问的人说不出，这条算不合格，当场改写。教练只盯一件事：有没有人问的是「这题选什么」（那是考他，不合格），而不是「第几步」（合格）。</div>
+  </div>
+  <div class="seg seg4"><div class="t">整合 24′</div>
+    <div class="who"><b>老师做：</b>Critique 各一条，只问"这条红的是知识点不会，还是步骤断了一截？"</div>
+    <div class="who"><b>学员做：</b>当堂 v2 → 三行记录 → 同桌互报红点总数 → 钩子。</div>
+    <div class="say">"红点最多的人今天赢了——因为你终于知道该修哪儿了。下周，我们把每个红点变成一张你自己写的卡。"</div>
+  </div>
+  <div class="method"><b>本周方法点：</b>错题三问——"粗心"不是原因，是没写出来的那一步。写不出卡点，就不算诊断完。</div>
+  <div class="method"><b>三感自检（教练课前 5 分钟看一眼）：</b>参与=贴红黄绿染色／掌控=「懂/不懂/不确定」三档由他自己判，教练不许改／进展=从「我哪儿都不会」到红点变成一个具体数字</div>
+  <div class="gb"><div class="good"><b>这样做：</b>"判别式那题，卡在 b²-4ac 代入前忘了先化成一般式"。</div><div class="bad"><b>别这样：</b>"这题粗心了"——下一张考卷它还会再爆一次。</div></div>
+  <div class="out"><b>本周产出：</b>断点清单 v2（红点全部锚在真实错题上，每条有卡点句）。<br><b>过关判据：</b>两次考卷错题 100% 过三问；每个红点有卡点句；红点数 ≤ 地图条数的 40%（超了先挑最红 10 个，其余标"排队"）。</div>
+  <div class="ai"><b>AI 怎么用：</b>R6-1 查询（错题归类，学员点头才算数）。<span class="red">红线：不许让 AI 直接写卡点句——卡点句必须是自己那一遍的真实想法。</span></div>
+  <div class="hw"><b>课后任务：</b>把断点清单念给同桌（微信语音即可），让对方问一句"第几步？"。<br><b>下周带什么来：</b>断点清单 + 每个红点对应的课本页码。</div>
+  <div class="mat"><b>材料与工具：</b>两次考卷原件、三色标记规则卡。<br><b>老师提前 10 分钟检查：</b>每人地图 v1 是否交齐；缺的课下一对一先补。</div>
+</div>
+
+<!-- W3 -->
+<div class="wk" id="w03">
+  <div class="wk-head"><span class="wk-no">W3</span><span class="wk-title">「把我不会的，讲给'它'听」</span></div>
+  <div class="goal"><b>今天一句话目标：</b>每个红点产出一张自己写的知识卡：它是什么 + 我之前错在哪，并讲出去一次。</div>
+  <div class="seg seg1"><div class="t">激活 12′</div>
+    <div class="who"><b>老师做：</b>开场提取——随机点两个红点， owners 不看清单说出卡点句。</div>
+    <div class="who"><b>学员做：</b>说不出的人现场翻考卷 30 秒后再说——说得出才算诊断过。</div>
+  </div>
+  <div class="seg seg2"><div class="t">示证 24′</div>
+    <div class="who"><b>老师做：</b>演示一个方法点——<b>知识卡两段式</b>：正面"它是什么"（用自己的话，不许抄书），背面"我之前错在哪"（卡点句升级版：当时的错误思路 vs 正确思路差在哪一步）。现场把一个红点做成卡。</div>
+    <div class="who"><b>学员做：</b>看完立刻挑自己的一个红点试写。</div>
+    <div class="cut">时间不够：只要求正面，背面并进课后。</div>
+  </div>
+  <div class="seg seg3"><div class="t">应用 60′</div>
+    <div class="who"><b>老师做：</b>消失。巡场只记录谁在抄书——抄书是这周唯一的翻车点。</div>
+    <div class="who"><b>学员做：</b>把自己最红的 5 个红点做成知识卡；写完两张就讲给同伴听一次（真人动作），同伴只许问"为什么"，不许说"对"。然后开 AI 追问自己的卡（R6-2）：让 AI 找卡里说不圆的地方，改不改自己定，改了要说为什么。</div>
+  </div>
+  <div class="seg seg4"><div class="t">整合 24′</div>
+    <div class="who"><b>老师做：</b>Critique 各一条，标准一句话：这张卡能不能让"三个月后的你"看懂。</div>
+    <div class="who"><b>学员做：</b>当堂改 v2 → 三行记录 → 钩子。</div>
+    <div class="say">"下周，我们把你这几张卡喂给一个 AI，让它变成只教你的老师。但从今天起记住：它喝的是你写的卡——你写歪了，它就教歪。"</div>
+  </div>
+  <div class="method"><b>本周方法点：</b>讲出来才算会——能让你卡住的地方说圆的，只有"当时的错误思路 vs 正确思路差在哪一步"这一句。</div>
+  <div class="method"><b>三感自检（教练课前 5 分钟看一眼）：</b>参与=写卡、讲卡、被追问后改卡／掌控=卡面写什么话由他定，抄书退回／进展=同一张卡有 v1 与 v2 两版，他能说出改了哪一句</div>
+  <div class="gb"><div class="good"><b>这样做：</b>"我以前直接把系数开方，忘了要先判正负——所以遇负数就崩"。</div><div class="bad"><b>别这样：</b>把课本定义原句抄上卡——三个月后你自己都看不懂自己抄过什么。</div></div>
+  <div class="out"><b>本周产出：</b>知识卡 v2 ×5（红点全覆盖可跨周，本周先 5 张）。<br><b>过关判据：</b>零抄书原句；每张卡经同伴追问后修改过一版；AI 追问的采纳/不采纳各有理由记录。</div>
+  <div class="ai"><b>AI 怎么用：</b>R6-2 反馈教练（先讲给人听，再让 AI 追问）。<span class="red">红线：不许让 AI 代写卡面——它写的再好，也不是你的错路，教不会你。</span></div>
+  <div class="hw"><b>课后任务：</b>再把 5 张卡各讲给一个家里人听，记录对方第一次没听懂的地方。<br><b>下周带什么来：</b>5 张卡 + 家里人没听懂的记录。</div>
+  <div class="mat"><b>材料与工具：</b>知识卡模板（课前每人一份）、上周断点清单。<br><b>老师提前 10 分钟检查：</b>红点最多的学员是否有卡可写（不足的现场补断点）。</div>
+</div>
+
+<!-- W4 -->
+<div class="wk" id="w04">
+  <div class="wk-head"><span class="wk-no">W4</span><span class="wk-title">「造人：给教练下约束」</span><span class="wk-gate">关三 · T3 教练上线</span></div>
+  <div class="goal"><b>今天一句话目标：</b>写出自己教练的约束卡，喂上知识卡，让教练第一次开口。</div>
+  <div class="seg seg1"><div class="t">激活 12′</div>
+    <div class="who"><b>老师做：</b>开场提取——不看卡说出自己的三个红点和卡里那句"差在哪一步"。</div>
+    <div class="who"><b>学员做：</b>轮流说，全班拼出一张"全班红点地图"。</div>
+  </div>
+  <div class="seg seg2"><div class="t">示证 24′</div>
+    <div class="who"><b>老师做：</b>演示一个方法点——<b>约束卡四栏</b>：身份（它是谁的什么老师）／边界（不许直接给答案、先问我、一次只问一步）／食材（只用我的知识卡，卡里没有就说"我不知道，你来补"）／语气（像同桌，不像广播）。现场用一份样例卡演示一遍"违规的教练"和"守规矩的教练"的区别。</div>
+    <div class="who"><b>学员做：</b>对照四栏打草稿，先写"边界"那栏——那是灵魂。</div>
+    <div class="cut">时间不够：语气栏课后再调，身份+边界+食材三栏今天必须立住。</div>
+  </div>
+  <div class="seg seg3"><div class="t">应用 60′</div>
+    <div class="who"><b>老师做：</b>消失，但巡场只问一句话："这句约束为什么是你写的？"——本周最危险的翻车是让 AI 代写约束。</div>
+    <div class="who"><b>学员做：</b>把约束卡写成系统设定（R6-3），喂入 W3 的知识卡，和自己的教练对话 15 分钟测试边界：故意问"直接告诉我答案行不行"，看它守不守。然后交给同伴实测，收 3 条意见，<b>其中至少 1 条必须是「它哪里让我不耐烦」</b>——三条全是好话的退回重写，那是捧场不是实测。</div>
+  </div>
+  <div class="seg seg4"><div class="t">整合 24′</div>
+    <div class="who"><b>老师做：</b>Critique 各一条，只看边界：它有没有一次直接吐了答案。</div>
+    <div class="who"><b>学员做：</b>当堂修约束 → v2 → 三行记录 → 钩子。</div>
+    <div class="say">"下周我们办一件事：你出题，考它。它要是不懂你的卡，是你卡写得糊——别急着怪它。"</div>
+  </div>
+  <div class="method"><b>本周方法点：</b>约束即教养——AI 什么样，取决于你给它立的规矩。写不清的规矩，它一定钻空子。</div>
+  <div class="method"><b>三感自检（教练课前 5 分钟看一眼）：</b>参与=写约束、喂卡、诱导测试 5 问／掌控=四栏里每一句都是他写的（教练只问「这句约束为什么是你写的」）／进展=从「它什么都会」到「它在我写的边界里教我」</div>
+  <div class="gb"><div class="good"><b>这样做：</b>"学生答错时不许报答案，只问'你第几步开始不确定的'"。</div><div class="bad"><b>别这样：</b>"帮我教好数学"——这不是约束，这是许愿。</div></div>
+  <div class="out"><b>本周产出：</b>教练 v1（约束卡 + 已喂知识卡）+ 同伴实测 3 条意见。<br><b>过关判据：</b>故意诱导 5 次，直接给答案 ≤1 次；知识卡全部挂载；3 条同伴意见各有一条回应。</div>
+  <div class="ai"><b>AI 怎么用：</b>R6-3 协作创造（学员自己写约束，AI 只执行）。<span class="red">红线：约束卡必须自己写——让 AI 代写约束 = 请别人给你的老师立规矩。</span></div>
+  <div class="hw"><b>课后任务：</b>每天 20 分钟用教练过两个红点（"喂教练"日常启动），记三行。<br><b>下周带什么来：</b>教练对话记录里最"蠢"的 3 条回答。</div>
+  <div class="mat"><b>材料与工具：</b>Agent 平台账号（课前开好）、约束卡模板、知识卡包。<br><b>老师提前 10 分钟检查：</b>每人账号能登录；样例教练可演示；网速。</div>
+</div>
+
+<!-- W5 -->
+<div class="wk" id="w05">
+  <div class="wk-head"><span class="wk-no">W5</span><span class="wk-title">「考考你的教练」</span></div>
+  <div class="goal"><b>今天一句话目标：</b>出 10 道题考自己的教练，找出它的错和漏洞，修出教练 v2。</div>
+  <div class="seg seg1"><div class="t">激活 12′</div>
+    <div class="who"><b>老师做：</b>开场提取——说出本周喂了教练的两个红点，和教练最蠢的一次回答。</div>
+    <div class="who"><b>学员做：</b>轮流念"最蠢回答"，全班先笑，再猜它为什么错（卡糊了还是约束松了）。</div>
+  </div>
+  <div class="seg seg2"><div class="t">示证 24′</div>
+    <div class="who"><b>老师做：</b>演示一个方法点——<b>出题三档</b>：直接问卡上的（它该会）／换说法问（它该认出）／卡上没有的（它该说"我不知道，你来补"）。每档讲一个例子，说明"考教练其实是考自己的卡"。</div>
+    <div class="who"><b>学员做：</b>现场把自己 10 题按三档分好。</div>
+    <div class="cut">时间不够：只做前两档，第三档并进课后。</div>
+  </div>
+  <div class="seg seg3"><div class="t">应用 60′</div>
+    <div class="who"><b>老师做：</b>消失。巡场记录每人"教练翻车"次数——翻车多是这周的好事。</div>
+    <div class="who"><b>学员做：</b>互测：先考自己的教练（10 题），再和同伴交换教练各测 5 题（真人动作）；每次翻车当场归因——约束问题改约束，卡糊改卡；产出修复记录。</div>
+  </div>
+  <div class="seg seg4"><div class="t">整合 24′</div>
+    <div class="who"><b>老师做：</b>Critique 各一条，只问"这次修的是约束还是卡？为什么归那里？"</div>
+    <div class="who"><b>学员做：</b>教练 v2 定稿 → 三行记录 → 钩子。</div>
+    <div class="say">"最后一周，考场见真章：30 分钟闭卷，全是你自己的红点。然后——当着家长的面，讲清你的教练是怎么教你的。"</div>
+  </div>
+  <div class="method"><b>本周方法点：</b>能考住 AI 的人，才是真懂了——你出的每一题，都在暴露你卡上缺的那句话。</div>
+  <div class="method"><b>三感自检（教练课前 5 分钟看一眼）：</b>参与=出 10 题考教练、修漏洞／掌控=出哪 10 题、三档怎么分全由他定／进展=教练 v1→v2 的修改清单，每条都对应他自己出的某一题</div>
+  <div class="gb"><div class="good"><b>这样做：</b>"教练把判别式答错了——回查发现我卡上没写'先化一般式'，已补"。</div><div class="bad"><b>别这样：</b>教练答错就换个 AI——工具没有错，错的是你喂它的东西。</div></div>
+  <div class="out"><b>本周产出：</b>教练 v2 + 测试记录（10+5 题，逐题归因）。<br><b>过关判据：</b>三档题各 ≥2 道；每次翻车有归因（约束/卡）与修复；交换实测 ≥5 题有同伴签名。</div>
+  <div class="ai"><b>AI 怎么用：</b>R6-3 协作创造（考它、修它）。<span class="red">红线：不许为了让教练"显得聪明"而删掉边界——它开始直接给答案的那一刻，这门课就白上了。</span></div>
+  <div class="hw"><b>课后任务：</b>每天 20 分钟用 v2 复习两个红点；把答辩要讲的四件事列提纲（我的教练为什么这么教我／它哪里错过／我怎么修的／下周我还打算怎么用它）。<br><b>下周带什么来：</b>教练 v2、全部知识卡、答辩提纲、一件像样的"翻坑再爬出来"的故事。</div>
+  <div class="mat"><b>材料与工具：</b>测试记录表、互测签名卡。<br><b>老师提前 10 分钟检查：</b>成果日场地与家长通知回执；闭卷题（从学员红点里出，出题人=教练，审题人=老师）。</div>
+</div>
+
+<!-- W6 -->
+<div class="wk" id="w06">
+  <div class="wk-head"><span class="wk-no">W6</span><span class="wk-title">「它真的懂我吗？」</span><span class="wk-gate">关四 · T4 闭卷实测 + 独立答辩</span></div>
+  <div class="goal"><b>今天一句话目标：</b>闭卷 30 分钟测自己的红点题，然后当着家长的面，4 分钟不看稿讲清你的教练。</div>
+  <div class="seg seg1"><div class="t">开场 + 闭卷 40′（成果日改版，不套 120′ 时间盒）</div>
+    <div class="who"><b>老师做：</b>发卷（题目全部来自全班红点池， anonymized）；计时；收卷后立刻对答案，学员自己给自己染色。</div>
+    <div class="who"><b>学员做：</b>闭卷完成；对照 W2 断点清单，标出"修好的红点"和"还没修好的红点"——两组数字都要。</div>
+    <div class="say">"今天没有及格线。你们要带走的是两张数字：修好了几个，还欠几个。第二个数字比第一个值钱——它就是你下学期的第一页。"</div>
+  </div>
+  <div class="seg seg2"><div class="t">独立答辩 60′（每 4 分钟 + 2 分钟问答）</div>
+    <div class="who"><b>老师做：</b>主持；评委=家长+同伴+教练；每个答辩后只许问"为什么"，不许评"好不好"。</div>
+    <div class="who"><b>学员做：</b>不看稿讲四件事：我的教练为什么这么教我／它哪里错过／我怎么修的／我下学期打算怎么用它。现场可开教练演示一段真实对话。</div>
+    <div class="cut">人多吃不消就拆两组，另一组先做"教练体验区"（家长亲自上手被教练教一道题）。</div>
+  </div>
+  <div class="seg seg3"><div class="t">收口 50′</div>
+    <div class="who"><b>老师做：</b>发 90 天约定卡：写下"接下来 90 天，我每周用教练做什么、怎么证明"；与每位学员当众确认。</div>
+    <div class="who"><b>学员做：</b>填卡、当众念第一行；把四件套（地图/断点/教练/记录）打包存档——这就是你的第一份"过程证据资产"。</div>
+    <div class="say">"这门课真正的产出不是那 30 分钟的卷子，是你现在手里这个文件夹。90 天后我会来问一次：它还活着吗？"</div>
+  </div>
+  <div class="method"><b>本周方法点：</b>答辩不看稿——看得见的东西人人会念，讲得清"为什么"的才是你的。</div>
+  <div class="method"><b>三感自检（教练课前 5 分钟看一眼）：</b>参与=闭卷实测 + 答辩／掌控=答辩讲哪三件由他自己挑（不规定提纲）／进展=W1 第一版地图与今天的地图并排放着——六周前那张纸还在</div>
+  <div class="gb"><div class="good"><b>这样做：</b>"它第二次还问'第几步开始不确定'，因为我的边界里写了这一条"。</div><div class="bad"><b>别这样：</b>答辩念 PPT——那是在展示 AI 的功劳，不是你的。</div></div>
+  <div class="out"><b>本周产出：</b>T4 闭卷卷面 + 修好/未修红点两组数字 + 独立答辩完成 + 90 天约定卡。<br><b>过关判据：</b>答辩全程不看稿；"为什么"追问能答到约束层或卡层（答"AI 说的"不算）；四件套归档完整。</div>
+  <div class="ai"><b>AI 怎么用：</b>以人为主（答辩禁屏，演示环节除外）。<span class="red">红线：演示的对话必须是真实历史记录，不许现场新编。</span></div>
+  <div class="hw"><b>课后任务：</b>90 天约定卡第一周执行；期中考后带新考卷来复测一次红点（一对一里过）。<br><b>成果日最后一个动作 5′（第 12 条 · 做完的人去哪）：</b>教练当场念三条出口——① 自己接着用（默认，大多数人走这条）② 升年度 Studio（只说一次，不推销）③ 带教练去做真实项目——学员在 90 天约定卡背面勾选一条。<b>三条出口不进宣传物料。</b><br><b>复测排期（第 10 条）：</b>+6 周 30′ 线上期中复测，<b>由教练主动约，不等学员来</b>（学员不回来正是最需要复测的时候）；+13 周 20′ 90 天回看，只做三件事——拿出 W1 第一版地图、拿出今天的地图、学员讲一句「这 90 天它替我干了什么、我自己干了什么」。结论如实写，包括「教练替代了学员」这种难看的。<br><b>下周带什么来：</b>——（课程结束；第 30/60/90 天检查点另约）。</div>
+  <div class="mat"><b>材料与工具：</b>闭卷卷（红点池出题）、答辩计时器、90 天约定卡、四件套归档模板。<br><b>老师提前 10 分钟检查：</b>家长到齐表、座位（家长坐后排）、投影可开教练对话。</div>
+</div>
+
+</main>
+
+<footer><div class="wrap"><div class="foot">
+  <svg viewBox="0 0 100 124" style="height:20px" aria-hidden="true"><path d="M50,10 C68,40 82,58 82,82 A32,32 0 1,1 18,82 C18,58 32,40 50,10 Z" fill="none" stroke="#8A8478" stroke-width="4" stroke-linejoin="round"/><circle cx="50" cy="88" r="9.5" fill="#E85A17"/></svg>
+  <span>《制作你自己的偏科救星》教师课件 v1.1 ｜ 总纲：00_课程设计总纲-v1 ｜ 规则：超脑课程设计规则 v1.1（R1–R6）｜ 格式：模具 4</span>
+</div></div></footer>
+
+</body>
+</html>
